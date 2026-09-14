@@ -1,34 +1,41 @@
 # This the configuration file for your submission.
 # Please edit the fields below to match your project.
 
-project-name: Cool Project
-top-cell: "heichips26_digital_project" # Must be a unique name
+project-name: RiMaX
+top-cell: "heichips26_RiMaX" # Must be a unique name
 team-members:
-- Firstname Lastname
-- Firstname Lastname
-- Firstname Lastname
-slot-size: small # small, large, tiny
+- Pouria Hasani
+- Nima Amirafshar
+- Soheil Khoyooz
+- Susindhar Manivasagann
+slot-size: large # small, large, tiny
 analog-pins: 0 # 0-3, only for small or tiny projects
-short-description: This is a super cool project!
+short-description: This project uses a simple riscv core and is equipted with an approximate floating point multiplier
 # Please add the documentation about your project here.
 # Why did you choose to create it? How does it work? How can it be tested, etc.?
 # If your project requires additional external hardware, e.g. a USB port,
 # please mention this so we can consider it when designing the HeiChips PCB.
 long-description: |
-  Is this thing on?
+    This project is about the suitablility of approximation in the arithmatic units for different applications.
+    The CPU core is picorv32 supporting rv32i ISA. As a co-processor there is an approximate floating point multiplier
+    which has its own costum instructions. The approximate multiplier is 20 times smaller than the exact counter part
+    which makes it highly suitable to reduce the area and therefore the cost of the chip. The Error of the multipler has 
+    MRED of less 10^-3. 
+    The top module will use the FPGA to forward the mermory access to the off chip and retrive the data. 
+    The module for the fpga and the connecting module the whole chip have been designed and tested. 
   
-  This is a super cool project 👏
+    
   
-  * with
-  * bullet
-  * points
+    
+    
+    
   
-  **nice** *formatting* and [links](https://heichips.github.io/).
+    
 
 # These paths are used to verify your
 # submission during the precheck.
 # Wildcards are allowed, but there
 # should only be a single match.
-gds-path: macros/heichips26_digital_project/final/gds/*.gds
-lef-path: macros/heichips26_digital_project/final/lef/*.lef
-header-path: macros/heichips26_digital_project/final/vh/*.vh
+gds-path: macros/heichips26_rimax/final/gds/*.gds
+lef-path: macros/heichips26_rimax/final/lef/*.lef
+header-path: macros/heichips26_rimax/final/vh/*.vh
